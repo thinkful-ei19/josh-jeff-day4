@@ -19,7 +19,8 @@ $(function() {
       </li>`);
   });
 
-    $('.shopping-item-toggle').on("click", function(){
+    $('shopping-item-toggle').on("click", function(){
+      $( ".shopping-item" ).toggle('shopping-item__checked')
         
     })
 
