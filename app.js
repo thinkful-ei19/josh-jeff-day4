@@ -6,5 +6,5 @@ function catPhotosSelect(){
     $('.hero img').attr('src',targetCat).attr('alt',targetAlt);
 });
 }
-
+//test
 $(catPhotosSelect);
