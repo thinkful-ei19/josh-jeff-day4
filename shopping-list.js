@@ -1,13 +1,21 @@
 $(function() {
-  
-  $("button").click(function(event) {
-    $("ul").append(
-      "<li>" +
-      ["cat", "dog", "rock"][Math.floor(Math.random()*3)] + "</li>"
-    );
-  });
-  
-  $('ul').on('click', 'li', function(event) {
-    this.remove();
-  });
-});
+
+$(.js-shopping-list-form).submit(function(event)){
+    event.preventDefault();
+
+    let items = $(.js-shopping-list-entry).val();
+    $(.js-shopping-list-entry).val(' ');
+
+    $(.shopping-list).append(<li>
+        <span class="shopping-item">$(items)</span>
+        <div class="shopping-item-controls">
+          <button class="shopping-item-toggle">
+            <span class="button-label">check</span>
+          </button>
+          <button class="shopping-item-delete">
+            <span class="button-label">delete</span>
+          </button>
+        </div>
+      </li>);
+
+}
