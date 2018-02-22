@@ -17,5 +17,14 @@ $(function() {
           </button>
         </div>
       </li>`);
-  });});
+  });
+
+    $('.shopping-item-toggle').on("click", function(){
+        
+    })
+
+
+});
+
+
 
