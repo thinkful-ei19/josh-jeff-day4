@@ -1,13 +1,13 @@
 $(function() {
 
-$('.js-shopping-list-form').submit(function(event){
+  $('#js-shopping-list-form').submit(function(event){
     event.preventDefault();
 
     let items = $('.js-shopping-list-entry').val();
     $('.js-shopping-list-entry').val('');
 
     $('.shopping-list').append(`<li>
-        <span class="shopping-item">$('items')</span>
+        <span class="shopping-item">${items}</span>
         <div class="shopping-item-controls">
           <button class="shopping-item-toggle">
             <span class="button-label">check</span>
@@ -17,5 +17,5 @@ $('.js-shopping-list-form').submit(function(event){
           </button>
         </div>
       </li>`);
+  });});
 
-});
