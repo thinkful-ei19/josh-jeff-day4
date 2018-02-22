@@ -20,4 +20,7 @@ function createFizzBuzz(length){
 }
 const toMapOver = createFizzBuzz(15);
 console.log(toMapOver)
-
+toMapOver.map(event)
+//map()
+//parseInt()
+//
