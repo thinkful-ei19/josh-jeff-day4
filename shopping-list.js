@@ -1,10 +1,11 @@
-$(function() {
+$(function () {
 
-  $('#js-shopping-list-form').submit(function(event){
+  $('#js-shopping-list-form').submit(function (event) {
     event.preventDefault();
 
     let items = $('.js-shopping-list-entry').val();
     $('.js-shopping-list-entry').val('');
+    
 
     $('.shopping-list').append(`<li>
         <span class="shopping-item">${items}</span>
@@ -19,13 +20,17 @@ $(function() {
       </li>`);
   });
 
-    $('shopping-item-toggle').on("click", function(){
-      $( ".shopping-item" ).toggle('shopping-item__checked')
-        
-    })
+  $('.shopping-list').on("click",'.shopping-item-toggle', function (event) {
+    let nameElement = $(event.currentTarget).parent().parent().find('.shopping-item');
+    nameElement.toggleClass('shopping-item__checked');
+    console.log(nameElement);
+
+  });
+  $('.shopping-list').on("click",'.shopping-item-delete', function (event) {
+    let liElement = $(event.currentTarget).parent().parent();
+    liElement.remove();
+   
+  })
 
 
 });
-
-
-
